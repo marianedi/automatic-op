@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+   <style> body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.button-container img {
+    position: absolute;
+    cursor: pointer;
+}
+.doctor-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 86px;
+    background: linear-gradient(90deg, #BAF2FF 0%, #91BDC7 100%);
+    width: 350px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    border: none;
+    text-transform: uppercase;
+}
+.doctor-container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 110px;
+    top: 200px;
+}
+.lungsorg {
+            top: 172px;
+            left: 381px;
+        }
+
+        .gynoorg {
+            top: 276px;
+            left: 381px;
+        }
+
+        .heartorg {
+            top: 380px;
+            left: 381px;
+        }
+
+ 
+</style>
+     
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+             
+            <div class="image-container">
+                <img src="images/PULM.png" alt="Description of Image">
+            </div>
+            <div class="button-container">
+                <img src="images/BACK.png" alt="ok Button" onclick="redirectToPreviousPagep()" class="img-button">
+
+                
+            </div>
+            <div class="doctor-container">
+                <button class="doctor-button" onclick="chooseDoctor('Lungs','doc1')">Dr.RAHUL</button>
+                <button class="doctor-button" onclick="chooseDoctor('Lungs','doc2')">Dr.AIMEN</button>
+
+               
+ 
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+        function redirectToPreviousPagep() {
+            window.location.href = "nextpage4.html"; // Replace with the URL of the next page
+        }
+        function redirectToNextPagell() {
+            window.location.href = "final.html"; // Replace with the URL of the next page
+        }
+        function redirectToNextPageg() {
+            window.location.href = "final.html"; // Replace with the URL of the next page
+        }
+         
+    </script>
+     
+    
+</body>
+
+</html>

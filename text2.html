@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .button-container img {
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .lungsorg {
+            top: 172px;
+            left: 381px;
+        }
+
+        .gynoorg {
+            top: 276px;
+            left: 381px;
+        }
+
+        .heartorg {
+            top: 380px;
+            left: 381px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="image-container">
+                <img src="images/PULM.png" alt="Description of Image">
+            </div>
+            <div class="button-container">
+                <img src="images/BACK.png" alt="ok Button" onclick="redirectToPreviousPage()" class="img-button">
+            </div>
+            <div class="button-container">
+                <img src="images/hedr1.png" alt="Heart Image" onclick="redirectToNextPage('Heart', 'Hedr1')" class="img-button lungsorg">
+                <img src="images/hedr2.png" alt="Gyno Image" onclick="redirectToNextPage('Heart', 'Hedr2')" class="img-button gynoorg">
+                <img src="images/newdr1.png" alt="New Image" onclick="redirectToNextPage('NewDept', 'Newdr1')" class="img-button heartorg">
+                <img src="images/newdr2.png" alt="New Image" onclick="redirectToNextPage('NewDept', 'Newdr2')" class="img-button heartorg">
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function redirectToPreviousPage() {
+            window.location.href = "nextpage4.jsp"; // Replace with the URL of the next page
+        }
+
+        function redirectToNextPage(department, doctor) {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "IncrementTokenServlet", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    window.location.href = "final.jsp";
+                }
+            };
+            xhr.send("department=" + department + "&doctor=" + doctor);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: url('images/patient_id.png');
+    /* Path to your background image */
+    background-size: cover;
+    /* Ensures the image covers the entire background */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+}
+
+.glass-textbox {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: black;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Bebas Neue";
+    font-size: larger;
+}
+
+.button-container {
+    padding-left: auto;
+    padding-right: 20px;
+    /* Adjust padding to move button to the right */
+    margin-top: 20px;
+}
+
+
+.img-button {
+    width: 100px;
+    /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+}

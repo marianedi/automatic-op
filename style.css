@@ -1,0 +1,166 @@
+:root {
+    --lightblue--color: #BAF2FF;
+    --darkblue--color: #91BDC7;
+    --darkgreen--color: #224976;
+    --lightgreen--color: #91DBBA;
+    --glassgreen--color: #BBFFE1;
+    --bottongreen--color: #ADFFDA;
+
+
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Bebas+Neue", Arial, Helvetica, sans-serif;
+
+
+}
+
+.logo {
+    color: #224976;
+
+    font-family: "Bebas Neue";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 20px;
+    line-height: 132.666%;
+    /* 66.333px */
+    letter-spacing: 0.5px
+}
+
+.fullvector {
+    width: 1120.201px;
+    height: 722.668px;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    ;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+header {
+    background: #91DBBA;
+    height: 100vh;
+    width: 100%;
+
+
+
+}
+
+.image-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-container img {
+    width: auto;
+    margin-left: 100px;
+    aspect-ratio: auto;
+    height: 500px;
+    display: block;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+    background: #91DBBA;
+ 
+}
+
+.img-button {
+    width: 100px;
+    /* Adjust size as needed */
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo2 {
+    color: #224976;
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #FFF;
+    font-family: "Bebas Neue";
+    font-size: 172px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.button-container img {
+    position: absolute;
+    cursor: pointer;
+}
+
+.lungsorg {
+    top: 272px; /* Distance from top */
+    right: 536px; /* Distance from right */
+    left: 288px; /* Distance from left */
+    bottom: 606.91px; /* Distance from bottom */
+}
+
+.gynoorg {
+    top: 476.59px; /* Distance from top */
+    right: 542.4px; /* Distance from right */
+    left: 283.5px; /* Distance from left */
+    bottom: 402.77px; /* Distance from bottom */
+}
+
+.heartorg {
+    top: 682.64px; /* Distance from top */
+    right: 543.03px; /* Distance from right */
+    left: 281px; /* Distance from left */
+    bottom: 196.27px; /* Distance from bottom */
+}

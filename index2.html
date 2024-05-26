@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .button-container{
+            position: absolute;
+            right: 300px;
+            top: 520px;
+        }
+        .img-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 86px;
+            background: linear-gradient(90deg, #BAF2FF 0%, #91BDC7 100%);
+            width: 80px;
+            font-size: 15px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            border: none;
+            text-transform: uppercase;
+        }
+
+        .logo{
+            margin-left: 200px;
+            margin-top: 120px;
+
+        }
+
+        .image-container img{
+            scale: 0.6;
+            margin-top: -100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <div class="logo">HOSPITAL</div>
+            </nav>
+            <div class="image-container">
+                <img src="images/fullvector.png" alt="Description of Image">
+            </div>
+
+            <div class="button-container ">
+                <button onclick="redirectToNextPage()" class="img-button">OK</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function redirectToNextPage() {
+            window.location.href = "nextpage.html"; 
+        }
+        departments = {
+            Lungs: { doc1: 0, doc2: 0 },
+            Gyno: { doc1: 0, doc2: 0 },
+            Heart: { doc1: 0, doc2: 0 }
+        };
+
+     
+    </script>
+</body>
+
+</html>

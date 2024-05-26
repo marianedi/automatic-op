@@ -1,0 +1,111 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioned Images as Buttons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .button-container img {
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .lungsorg {
+            top: 150px;
+            left: 288px;
+        }
+
+        .gynoorg {
+            top: 250.59px;
+            left: 288.5px;
+        }
+
+        .heartorg {
+            top: 350.64px;
+            left: 288px;
+        }
+    </style>
+</head>
+<header>
+    <div class="wrapper">
+         
+        <div class="image-container">
+            <img src="images/PULM.png">
+        </div>
+        <div class="button-container">
+             
+            <img src="images/BACK.png" alt="OK Button" onclick="redirectToNextPage4()" class="img-button">
+            
+        </div>
+
+<body>
+    <div class="button-container">
+        <img src="images/lungsorg.png" alt="Lungs Image" onclick="redirectToNextPagel()" class="img-button lungsorg">
+        <img src="images/gynoorg.png" alt="Gyno Image" onclick="redirectToNextPageg()" class="img-button gynoorg">
+        <img src="images/heartorg.png" alt="Heart Image" onclick="redirectToNextPageh()" class="img-button heartorg">
+    </div>
+
+    <script>
+        function redirectToNextPagel() {
+            window.location.href = "nextpage4.html"; // Replace with the URL of the next page
+        }
+        function redirectToNextPageg() {
+            window.location.href = "nextpage5.html"; // Replace with the URL of the next page
+        }
+        function redirectToNextPageh() {
+            window.location.href = "nextpage6.html"; // Replace with the URL of the next page
+        }
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            
+            <div class="image-container">
+                <img src="images/token disp.png" alt="Description of Image">
+            </div>
+            <div class="button-container">
+                <img src="images/BACK.png" alt="OK Button" onclick="redirectToNextPage()" class="img-button">
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function redirectToNextPage() {
+            window.location.href = "nextpage4.html"; // Replace with the URL of the next page
+        }
+    </script>
+</body>
+
+</html>

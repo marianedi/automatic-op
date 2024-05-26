@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .button-container img {
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .lungsorg {
+            top: 172px;
+            left: 381px;
+        }
+
+        .gynoorg {
+            top: 276px;
+            left: 381px;
+        }
+
+        .heartorg {
+            top: 380px;
+            left: 381px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+
+            <div class="image-container">
+                <img src="images/PULM.png" alt="Description of Image">
+            </div>
+            <div class="button-container">
+                <img src="images/BACK.png" alt="ok Button" onclick="redirectToPreviousPagep()" class="img-button">
+            </div>
+            <div class="button-container">
+                <img src="images/ludr1.png" alt="Lungs Image" onclick="redirectToNextPagell()" class="img-button lungsorg">
+                <img src="images/ludr2.png" alt="Gyno Image" onclick="redirectToNextPageg()" class="img-button gynoorg">
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function incrementToken(tokenKey) {
+            let tokenCount = localStorage.getItem(tokenKey) || 0;
+            tokenCount = parseInt(tokenCount) + 1;
+            localStorage.setItem(tokenKey, tokenCount);
+            console.log(tokenKey + " incremented to: " + tokenCount); // Debugging log
+        }
+
+        function redirectToPreviousPagep() {
+            window.location.href = "nextpage4.html";
+        }
+
+        function redirectToNextPagell() {
+            incrementToken('tokenCountLudr1');
+            localStorage.setItem('currentDoctor', 'Ludr1');
+            window.location.href = "final.html";
+        }
+
+        function redirectToNextPageg() {
+            incrementToken('tokenCountLudr2');
+            localStorage.setItem('currentDoctor', 'Ludr2');
+            window.location.href = "final.html";
+        }
+    </script>
+</body>
+
+</html>

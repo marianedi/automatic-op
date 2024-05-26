@@ -1,0 +1,45 @@
+
+.PULM{
+    width: 1120.201px;
+    height: 722.668px;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    ;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.button-container img {
+    position: absolute;
+    cursor: pointer;
+    width: 615.196px;
+    height: 144.932px;
+}
+
+.lungsorg {
+    top: 272px;
+    left: 288px;
+    width: 615.196px;
+    height: 144.932px;
+}
+
+.gynoorg {
+    top: 476.59px;
+    left: 283.5px;
+    width: 615.196px;
+    height: 144.932px;
+}
+
+.heartorg {
+    top: 682.64px;
+    left: 281px;
+    width: 615.196px;
+    height: 144.932px;
+}

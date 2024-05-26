@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   <style> body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.button-container img {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 100px;
+    margin-left: 200px;
+    
+}
+.img-button{
+    scale: 3;
+}
+.lungsorg {
+            top: 172px;
+            left: 381px;
+        }
+
+        .gynoorg {
+            top: 276px;
+            left: 381px;
+        }
+
+        .heartorg {
+            top: 380px;
+            left: 381px;
+        }
+
+ 
+</style>
+     
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+             
+            <div class="image-container">
+                <img src="images/deparments2.png" alt="Description of Image">
+            </div>
+            
+             
+            
+            <div class="button-container">
+                <img src="images/lungsorg.png" alt="Lungs Image" onclick="redirectToNextPagel()" class="img-button lungsorg">
+                <img src="images/gynoorg.png" alt="Gyno Image" onclick="redirectToNextPageg()" class="img-button gynoorg">
+                <img src="images/heartorg.png" alt="Heart Image" onclick="redirectToNextPageh()" class="img-button heartorg">
+                 
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+        function redirectToNextPage4() {
+            window.location.href = "nextpage.html"; // Replace with the URL of the next page
+        }
+
+        function redirectToNextPagel() {
+            window.location.href = "nextpage5.html"; // Replace with the URL of the next page
+        }
+        function redirectToNextPageg() {
+            window.location.href = "nextpage6.html"; // Replace with the URL of the next page
+        }
+        function redirectToNextPageh() {
+            window.location.href = "nextpage7.html"; // Replace with the URL of the next page
+        }
+    </script>
+    
+</body>
+
+</html>
