@@ -5,92 +5,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Data</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Display:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="nextpage.css">
-    <style>
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(0,0,0,.3);
-            border-radius: 50%;
-            border-top-color: #000;
-            animation: spin 1s ease-in-out infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </style>
+    <!-- firebase   -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore-compat.js"></script>
 </head>
 
 <body background="images/patient_id.png">
     <div class="glass-textbox">
-        <p>Name: <span id="name"><span class="loading"></span></span></p>
+        <p>Name: <span id="name">loading...</span></p>
     </div>
     <div class="glass-textbox">
-        <p>Age: <span id="age"><span class="loading"></span></span></p>
+        <p>Age: <span id="age">loading...</span></p>
     </div>
     <div class="glass-textbox">
-        <p>Blood Group: <span id="bloodgroup"><span class="loading"></span></span></p>
+        <p>Blood Group: <span id="bloodgroup">loading...</span></p>
     </div>
 
     <div class="button-container">
-        <img src="images/BACK.png" alt="Back Button" onclick="redirectToPreviousPage()" class="img-button">
+        <img src="images/BACK.png" alt="OK Button" onclick="redirectToPreviousPage()" class="img-button">
         <img src="images/OK BUTTON.png" alt="OK Button" onclick="redirectToNextPage()" class="img-button">
     </div>
-
     <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDIljbtqKM7lh6k1KXhCP2G3ycHJAmw_VQ",
+            authDomain: "opticketapp.firebaseapp.com",
+            projectId: "opticketapp",
+            storageBucket: "opticketapp.appspot.com",
+            messagingSenderId: "661950824332",
+            appId: "1:661950824332:web:e27241e0b8b5aac3efa0a9",
+            measurementId: "G-WCVYEETK4C"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Initialize Firestore
+        const db = firebase.firestore();
+
         function redirectToNextPage() {
             window.location.href = "nextpage4.html"; // Replace with the URL of the next page
         }
         function redirectToPreviousPage() {
-            window.location.href = "index2.html"; // Replace with the URL of the previous page
-        }
-
-        function updateField(id, value) {
-            const element = document.getElementById(id);
-            element.textContent = value || 'Not available';
-        }
-
-        function showError(message) {
-            console.error(message);
-            ['name', 'age', 'bloodgroup'].forEach(id => {
-                updateField(id, 'Error loading data');
-            });
+            window.location.href = "index2.html"; // Replace with the URL of the next page
         }
 
         function fetchData() {
-            fetch('data.txt')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    if (data.trim() === '') {
-                        throw new Error('No data available');
-                    }
-                    const [id, name, age, bloodGroup] = data.split(',');
-                    updateField('name', name);
-                    updateField('age', age);
-                    updateField('bloodgroup', bloodGroup);
-                })
-                .catch(error => {
-                    showError(`Error fetching data: ${error.message}`);
+            db.collection('op-data').get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    let data = doc.data();
+                    data = data.patient;
+                    document.getElementById('name').textContent = data.name || 'No name available';
+                    document.getElementById('age').textContent = data.age || 'No age available';
+                    document.getElementById('bloodgroup').textContent = data.bloodGroup || 'No bloodgroup available';
                 });
+            }).catch((error) => {
+                console.error("Error fetching data: ", error);
+            });
         }
-
-        // Poll every second
-        setInterval(fetchData, 1000);
-
-        // Initial fetch
-        fetchData();
+        
+        window.onload = fetchData();
     </script>
 </body>
 
